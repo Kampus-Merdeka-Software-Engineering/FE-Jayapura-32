@@ -1,290 +1,947 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Toothery Clinic</title>
 
-    <!-- font awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toothery Clinic</title>
 
-    <!-- my font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-    <!-- swiper css link  -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-    <!-- my style  -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Roboto:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
-  <body>
-    <header class="header">
-      <a href="#" class="logo">
-        <i class="fas fa-tooth"></i> Toothery Clinic
-      </a>
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#doctors">Doctors</a>
-        <a href="#testimonial">Testimonial</a>
-      </nav>
+  <!-- Font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-      <div id="menu-btn" class="fas fa-bars"></div>
-    </header>
+</head>
 
-    <!-- header end -->
+<body id="top">
 
-    <!-- home -->
+  <!-- 
+    - #HEADER
+  -->
 
-    <section class="home" id="home">
-      <div class="content">
-        <h3>YOUR GREAT SMILE BEGINS WITH A GREAT DENTIST</h3>
-        <p>We all take care of your smile. Come see us!</p>
+  <header class="header">
+
+    <div class="header-top">
+      <div class="container">
+
+        <ul class="contact-list">
+
+          <li class="contact-item">
+            <ion-icon name="mail-outline"></ion-icon>
+
+            <a href="mailto:info@example.com" class="contact-link">info@example.com</a>
+          </li>
+
+          <li class="contact-item">
+            <ion-icon name="call-outline"></ion-icon>
+
+            <a href="tel:+917052101786" class="contact-link">+91-7052-101-786</a>
+          </li>
+
+        </ul>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/revoU.co/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/revou_id/?hl=id" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/revoudotco/status/1673536551656251392" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.youtube.com/c/revoudotco" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
       </div>
-    </section>
+    </div>
 
-    <!-- home end -->
+    <div class="header-bottom" data-header>
+      <div class="container">
 
-    <!-- about us section-->
+        <a href="#" class="logo">Toothery Clinic</a>
 
-    <section class="about" id="about">
-      <h1 class="heading">about us</h1>
+        <nav class="navbar container" data-navbar>
+          <ul class="navbar-list">
 
-      <div class="row">
-        <div class="image">
-          <img src="images/about.jpg" alt="" />
-        </div>
+            <li>
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
 
-        <div class="content">
-          <h3>Why Choose Us?</h3>
-          <p>
-            Because we have experts who will help maintain your dental health.
-            We also always provide the best service with affordable treatment
-            options.
-          </p>
-          <p>
-            Best part is, Toothery Clinic will give you a smile you will be
-            proud of!
-          </p>
-        </div>
+            <li>
+              <a href="#about" class="navbar-link" data-nav-link>About</a>
+            </li>
+
+            <li>
+              <a href="#service" class="navbar-link" data-nav-link>Services</a>
+            </li>
+
+            <li>
+              <a href="#doctor" class="navbar-link" data-nav-link>Doctors</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="navbar-link" data-nav-link>Testimonial</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <a href="contact.html" class="btn">Feedback and Review</a>
+
+        <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
+          <ion-icon name="menu-sharp" aria-hidden="true" class="menu-icon"></ion-icon>
+          <ion-icon name="close-sharp" aria-hidden="true" class="close-icon"></ion-icon>
+        </button>
+
       </div>
-    </section>
+    </div>
 
-    <!-- about end -->
+  </header>
 
-    <!-- services -->
 
-    <section class="services" id="services">
-      <h1 class="heading">Services is Our #1 Priority</h1>
 
-      <div class="box-container">
-        <div class="box">
-          <img src="images/service-1.png" alt="" />
-          <h3>General Dentistry</h3>
-          <p>
-            At Toothery Clinic, we seek to cater to all of your dental needs. We
-            provide dental services specialized to you.
-          </p>
-        </div>
 
-        <div class="box">
-          <img src="images/service-2.png" alt="" />
-          <h3>Dental Implants</h3>
-          <p>
-            If you have missing teeth or want to stabilize your dentures, dental
-            implants are the closest things to permanent and natural teeth.
-          </p>
-        </div>
 
-        <div class="box">
-          <img src="images/service-3.png" alt="" />
-          <h3>Restorative Dentistry</h3>
-          <p>
-            We provide comprehensive treatments for restorative dental
-            procedures. We perform implants and full dental reconstruction.
-          </p>
-        </div>
+  <main>
+    <article>
 
-        <div class="box">
-          <img src="images/service-4.png" alt="" />
-          <h3>Oral Surgery</h3>
-          <p>
-            If you need teeth removed, our dentists are trained to perform all
-            aspects of dental surgery.
-          </p>
-        </div>
+      <!-- 
+        - #HERO
+      -->
 
-        <div class="box">
-          <img src="images/service-5.png" alt="" />
-          <h3>Cosmetic Teeth</h3>
-          <p>
-            Everyone deserves a beautiful smile! This treatment can dramatically
-            improve yours. Start to smile with confidence.
-          </p>
-        </div>
+      <section class="section hero" id="home" style="background-image: url('./assets/images/hero-bg.png')"
+        aria-label="hero">
+        <div class="container">
 
-        <div class="box">
-          <img src="images/service-6.png" alt="" />
-          <h3>Teeth Whitening</h3>
-          <p>
-            Brighten your smile with our professional teeth whitening
-            treatments, removing stains and discolouration to reveal a radiant,
-            white smile.
-          </p>
-        </div>
-      </div>
-    </section>
+          <div class="hero-content">
 
-    <!-- services end-->
+            <p class="section-subtitle">Welcome To Toothery Clinic</p>
 
-    <!-- doctors section -->
+            <h1 class="h1 hero-title">We Are Best Dental Service</h1>
 
-    <section class="doctors" id="doctors">
-      <h1 class="heading">our doctors</h1>
+            <p class="hero-text">
+              Your great smile begins with a great dentist. We all tak care of your smile. Come see us!
+            </p>
 
-      <div class="swiper team-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide slide">
-            <div class="image">
-              <img src="images/doctors-1.jpg" alt="" />
-              <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-              </div>
-            </div>
-            <div class="content">
-              <h3>Prof. Dr. Jhon, Sp. Ort</h3>
-              <span>Orthodontist</span>
-            </div>
+            <form action="" class="hero-form" name="submit-to-google-sheet">
+              <input type="email" name="email_address" aria-label="email" placeholder="Your Email Address..." required
+                class="email-field">
+
+              <button type="submit" class="btn">Get Call Back</button>
+            </form>
+
+            <span id="msg" class="message"></span>
+
           </div>
 
-          <div class="swiper-slide slide">
-            <div class="image">
-              <img src="images/doctors-2.jpg" alt="" />
-              <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-              </div>
-            </div>
-            <div class="content">
-              <h3>drg. Marion Jola, Sp. KGA</h3>
-              <span>Dentist</span>
-            </div>
-          </div>
+          <figure class="hero-banner">
+            <img src="./assets/images/gigi.png" width="587" height="839" alt="hero banner" class="w-100">
+          </figure>
 
-          <div class="swiper-slide slide">
-            <div class="image">
-              <img src="images/doctors-3.jpg" alt="" />
-              <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-              </div>
-            </div>
-            <div class="content">
-              <h3>Prof. Dr. Aphrodita, Sp. Ort</h3>
-              <span>Orthodontist</span>
-            </div>
-          </div>
-
-          <div class="swiper-slide slide">
-            <div class="image">
-              <img src="images/doctors-4.jpg" alt="" />
-              <div class="share">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-              </div>
-            </div>
-            <div class="content">
-              <h3>drg. Angelo Devan, Sp. KG</h3>
-              <span>Dentist</span>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- team section ends -->
 
-    <!-- testimonial -->
+      <!-- 
+        - #ABOUT
+      -->
 
-    <section class="testimonial" id="testimonial"></section>
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
 
-    <!-- testimonial ends-->
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="470" height="538" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
 
-    <!-- review  -->
+          <div class="about-content">
 
-    <section class="review" id="review">
-      <h1 class="heading">Your Feedback and Review Important To Us!</h1>
+            <p class="section-subtitle">About Us</p>
 
-      <form action="">
-        <span>Your Name :</span>
-        <div class="inputBox">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
+            <h2 class="h2 section-title">Why Choose Us</h2>
+
+            <p class="section-text section-text-1">
+              Because we have experts who will help maintain your dental health. We also always provide the best service
+              with affordable treatment options.
+            </p>
+
+            <p class="section-text">
+              Best partis, Toothery Clinic will give you a smile you will be pround of!
+            </p>
+
+            <a href="https://www.google.com/webhp?hl=id&sa=X&ved=0ahUKEwiDx4y15sWBAxWt4zgGHQ49CRcQPAgJ" class="btn">Read
+              more</a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service" id="service" aria-label="service">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Services</p>
+
+          <h2 class="h2 section-title text-center">What We Provide</h2>
+
+          <ul class="service-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-1.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">General Dentistry</h3>
+
+                  <p class="card-text">
+                    At Toothery Clinic, we seek to cater to all of you dental needs. We provide dental services
+                    specialized to you.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-2.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Dental Implants</h3>
+
+                  <p class="card-text">
+                    If you have missing teeth or want to stabilize your dentures, dental implants are the closest things
+                    to permanent and natural teeth.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-3.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Cosmetic Dentistry</h3>
+
+                  <p class="card-text">
+                    Everyone deserves a beautiful smile! This treatment can dramatically improve yours. Start t Smile
+                    with confidence
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="service-banner">
+              <figure>
+                <img src="./assets/images/gigi.png" width="409" height="467" loading="lazy" alt="service banner"
+                  class="w-100">
+              </figure>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-4.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Oral Surgery</h3>
+
+                  <p class="card-text">
+                    If you need teeth removed, our dentists are trained to perform all aspects of dental surgery.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-5.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Tooth Whitening</h3>
+
+                  <p class="card-text">
+                    Brighten your smile with our professional teeth whitening treatments, removing stains and
+                    discolouration to reveal a radiant, whit smile.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/service-icon-6.png" width="100" height="100" loading="lazy"
+                    alt="service icon" class="w-100">
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">Restorative Dentistry</h3>
+
+                  <p class="card-text">
+                    We provide comprehensive treatments for restorative dental procedures. We perform implants and full
+                    fental reconstruction.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #DOCTOR
+      -->
+
+      <section class="section doctor" id="doctor" aria-label="doctor">
+        <div class="container">
+
+          <p class="section-subtitle text-center">Our Doctor</p>
+
+          <h2 class="h2 section-title text-center">Best Expert Dentist</h2>
+
+          <ul class="has-scrollbar">
+
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-1.png" width="460" height="500" loading="lazy" alt="Howard Holmes"
+                    class="img-cover">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Howard Holmes</a>
+                </h3>
+
+                <p class="card-subtitle">Dentist</p>
+
+                <ul class="card-social-list">
+
+                  <li>
+                    <a href="https://www.facebook.com/?locale=id_ID" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/?lang=id" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.instagram.com/" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-2.png" width="460" height="500" loading="lazy" alt="Ella Thompson"
+                    class="img-cover">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Ella Thompson</a>
+                </h3>
+
+                <p class="card-subtitle">Dentist</p>
+
+                <ul class="card-social-list">
+
+                  <li>
+                    <a href="https://www.facebook.com/?locale=id_ID" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/?lang=id" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.instagram.com/" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-3.png" width="460" height="500" loading="lazy" alt="Vincent Cooper"
+                    class="img-cover">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Vincent Cooper</a>
+                </h3>
+
+                <p class="card-subtitle">Dentist</p>
+
+                <ul class="card-social-list">
+
+                  <li>
+                    <a href="https://www.facebook.com/?locale=id_ID" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/?lang=id" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.instagram.com/" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </li>
+
+            <li class="scrollbar-item">
+              <div class="doctor-card">
+
+                <div class="card-banner img-holder" style="--width: 460; --height: 500;">
+                  <img src="./assets/images/doctor-4.png" width="460" height="500" loading="lazy" alt="Danielle Bryant"
+                    class="img-cover">
+                </div>
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Danielle Bryant</a>
+                </h3>
+
+                <p class="card-subtitle">Dentist</p>
+
+                <ul class="card-social-list">
+
+                  <li>
+                    <a href="https://www.facebook.com/?locale=id_ID" class="card-social-link">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://twitter.com/?lang=id" class="card-social-link">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://www.instagram.com/" class="card-social-link">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="section cta" aria-label="cta">
+        <div class="container">
+
+          <figure class="cta-banner">
+            <img src="./assets/images/cta-banner.png" width="1056" height="1076" loading="lazy" alt="cta banner"
+              class="w-100">
+          </figure>
+
+          <div class="cta-content">
+
+            <p class="section-subtitle">Feedback and Review</p>
+            <h2 class="h2 section-title">LOVE IS LIKE A TOOTHACHE, BETTER HEARTACHE THAN</h2>
+            <a href="contact.html" class="btn">Feedback and Review</a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog" aria-label="blog">
+        <div class="container">
+
+          <p class="section-subtitle text-center">TESTIMONIAL</p>
+
+          <h2 class="h2 section-title text-center">Feedback and Review</h2>
+
+          <ul class="blog-list">
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-2.jpg" width="1180" height="800" loading="lazy"
+                    alt="Cras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">15th August 2023</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+                  <p class="card-text">
+                    The treatment was not good and clear, the doctor only came for a short time and his response was
+                    slow. The service can be improved even better.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-1.jpg" width="1180" height="800" loading="lazy"
+                    alt="Dras accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">25th August 2023</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+
+
+                  <p class="card-text">
+                    The clinic is comfortable, the quality is very good, but many of the nurses are not friendly and the
+                    treatment is not fast enough.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+
+                <figure class="card-banner img-holder" style="--width: 1180; --height: 800;">
+                  <img src="./assets/images/blog-3.jpg" width="1180" height="800" loading="lazy"
+                    alt="Seas accumsan nulla nec lacus ultricies placerat." class="img-cover">
+
+                  <div class="card-badge">
+                    <ion-icon name="calendar-outline"></ion-icon>
+
+                    <time class="time" datetime="2022-03-24">1th September 2023</time>
+                  </div>
+                </figure>
+
+                <div class="card-content">
+
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+
+                  <p class="card-text">
+                    Hopefully service or patient satisfaction is maintained. So that the nurse on duty should ask more
+                    often about the patient's progress and comfort conditions.
+                  </p>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top section">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">Toothery Clinic</a>
+
+          <p class="footer-text">
+            We can save your teeth better than Patrick Roy saved the Avalanche last night!
+          </p>
+
+          <div class="schedule">
+            <div class="schedule-icon">
+              <ion-icon name="time-outline"></ion-icon>
+            </div>
+
+            <span class="span">
+              <a href="https://calendly.com/">Monday - Saturday :</a>
+              <a href="clock.html"> 9:00am - 22:00am</a>
+            </span>
+          </div>
+
         </div>
 
-        <span>Your Email :</span>
-        <input type="email" placeholder="Enter Your Email" class="box" />
+        <ul class="footer-list">
 
-        <span>Your Notes :</span>
-        <input type="notes" placeholder="Enter Your Notes" class="box" />
+          <li>
+            <p class="footer-list-title">Other Links</p>
+          </li>
 
-        <input type="submit" value="Submit Now" class="btn" />
-      </form>
-    </section>
+          <li>
+            <a href="file:///D:/front-end-capstone-project-section-jayapura-group-32-main/front-end-capstone-project-section-jayapura-group-32-main/index.html#home"
+              class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
 
-    <!-- review ends -->
+              <span class="span">Home</span>
+            </a>
+          </li>
 
-    <!-- maps -->
+          <li>
+            <a href="file:///D:/front-end-capstone-project-section-jayapura-group-32-main/front-end-capstone-project-section-jayapura-group-32-main/index.html#about"
+              class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
 
-    <section class="maps" id="maps">
-      <h1 class="heading">Find Us Here</h1>
+              <span class="span">About</span>
+            </a>
+          </li>
 
-      <div class="maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.27702328764!2d106.82385307411387!3d-6.227160160983986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4734a8de3%3A0xb2ad7eacc88d7f3e!2sRevoU!5e0!3m2!1sen!2sid!4v1695610204673!5m2!1sen!2sid"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+          <li>
+            <a href="file:///D:/front-end-capstone-project-section-jayapura-group-32-main/front-end-capstone-project-section-jayapura-group-32-main/index.html#service"
+              class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Services</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="D:\front-end-capstone-project-section-jayapura-group-32-main" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Project</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://kampusmerdeka.kemdikbud.go.id/" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Our Team</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://revou.co/?headlineurl=revou&utm_source=sem&utm_medium=cpc&utm_content=id_fp_branded_high_conversion_general--revou_b_c&gad=1&gclid=EAIaIQobChMIis2TsLrHgQMV0qtmAh1Y-A8ZEAAYASAAEgLXRvD_BwE#our-programs"
+              class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Latest Blog</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Our Services</p>
+          </li>
+
+          <li>
+            <a href="https://www.iomcworld.org/general-dentistry.html" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">General Dentistry</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://jada.ada.org/article/S0002-8177(14)62741-0/fulltext" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Dental Implants</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.imedpub.com/scholarly/cosmetic-dentistry-journals-articles-ppts-list.php"
+              class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Cosmetic Dentistry</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://onlinelibrary.wiley.com/journal/1752248X" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Oral Surgery</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.sciencedirect.com/science/article/pii/S2772559622000207" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Tooth Whitening</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://onlinelibrary.wiley.com/journal/17088240" class="footer-link">
+              <ion-icon name="add-outline"></ion-icon>
+
+              <span class="span">Restorative Dentistry</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Contact Us</p>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <address class="item-text">
+              <a href="https://www.google.com/maps/place/RevoU/@-6.2271602,106.8238477,17z/data=!3m2!4b1!5s0x2e69f3e50d8b6585:0x6551a5f9f5abc800!4m6!3m5!1s0x2e69f3e4734a8de3:0xb2ad7eacc88d7f3e!8m2!3d-6.2271655!4d106.826428!16s%2Fg%2F11r0wt4m51?entry=ttu"
+                class="footer-link">RevoU</a>
+            </address>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+
+            <a href="tel:+917052101786" class="footer-link">+91-7052-101-786</a>
+          </li>
+
+          <li class="footer-item">
+            <div class="item-icon">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <a href="mailto:help@example.com" class="footer-link">help@example.com</a>
+          </li>
+
+        </ul>
+
       </div>
-    </section>
+    </div>
 
-    <!-- maps ends -->
+    <div class="footer-bottom">
+      <div class="container">
 
-    <!-- footer -->
-    <section class="footer">
-      <div class="credit">Created by Grup 32 | All rights reserved!</div>
-    </section>
+        <p class="copyright">
+          &copy; 2023 All Rights Reserved by GROUP 32.
+        </p>
 
-    <!-- footer ends -->
+        <ul class="social-list">
 
-    <!-- swiper js link  -->
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+          <li>
+            <a href="https://id.linkedin.com/school/revou/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
 
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
-  </body>
+          <li>
+            <a href="https://www.instagram.com/revou_id/?hl=id" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/revoudotco/status/1673536551656251392" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="caret-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzP_fB7ZNFsvIppxkTguhGtZv5V69fPhb175-AR8GVxyUquJmyW1eUyHdZgk59jeAmOdg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById('msg')
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML = "Thank You For Subcribing!"
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>

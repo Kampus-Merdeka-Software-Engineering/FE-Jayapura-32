@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form</title>
+  <title>Form Review</title>
   <link rel="stylesheet" href="./assets/css/contact.css">
   <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
@@ -15,7 +15,7 @@
 
       <div class="input-group">
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+        <input type="text" placeholder="Enter Your Name" id="contact-name" onkeyup="validateName()">
         <span id="name-error"></span>
       </div>
 
@@ -31,13 +31,7 @@
         <span id="email-error"></span>
       </div>
 
-      <div class="input-group">
-        <label>Your Message</label>
-        <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
-        <span id="message-error"></span>
-      </div>
-
-      <button onclick="return validateForm()">Submit</button>
+      <button onclick="return validateForm()">Next</button>
       <span id="submit-error"></span>
 
     </form>

@@ -77,7 +77,7 @@ function validateMessage() {
 }
 
 function validateForm() {
-  if (!validateMessage()) {
+ if (!validateName() || !validateEmail() || !validateMessage()) {
     submitError.style.display = "block";
     submitError.innerHTML = "Please fix error to submit";
     setTimeout(function () {

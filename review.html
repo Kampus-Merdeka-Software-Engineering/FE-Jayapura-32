@@ -19,7 +19,7 @@
 
 <body>
     <div class="wrapper">
-        <h3>Feedback and Reviews</h3>
+        <h3>Please share your experience with us and let us know if there's anything we could do to improve.</h3>
         <form action="https://kampus-merdeka-software-engineering.github.io/FE-Jayapura-32/">
             <div class="rating">
                 <input type="number" name="rating" hidden />
@@ -29,9 +29,16 @@
                 <i class="bx bx-star star" style="--i: 3"></i>
                 <i class="bx bx-star star" style="--i: 4"></i>
             </div>
-
             <div class="input-group">
-                <textarea rows="5" placeholder="Your feedback..." id="review-message" onkeyup="validateMessage()"></textarea>
+                <textarea rows="1" placeholder="Your name" id="review-name" onkeyup="validateName()"></textarea>
+                <span id="name-error"></span>
+            </div>
+            <div class="input-group">
+                <textarea rows="1" placeholder="Email" id="review-email" onkeyup="validateEmail()"></textarea>
+                <span id="email-error"></span>
+            </div>
+            <div class="input-group">
+                <textarea rows="5" placeholder="Please leave your feedback" id="review-message" onkeyup="validateMessage()"></textarea>
                 <span id="message-error"></span>
             </div>
 

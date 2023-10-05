@@ -1,139 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,800;1,700;1,800&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --yellow: #FFBD13;
-    --blue: #4383FF;
-    --blue-d-1: #3278FF;
-    --light: #F5F5F5;
-    --grey: #AAA;
-    --white: #FFF;
-    --shadow: 8px 8px 30px rgba(0, 0, 0, .05);
+  --yellow: #ffbd13;
+  --blue: #4383ff;
+  --blue-d-1: #3278ff;
+  --light: #f5f5f5;
+  --grey: #aaa;
+  --white: #fff;
+  --shadow: 8px 8px 30px rgba(0, 0, 0, 0.05);
 }
 
 body {
-    background: var(--light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
+  background: var(--light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 .wrapper {
-    background: var(--white);
-    padding: 2rem;
-    max-width: 576px;
-    width: 100%;
-    border-radius: .75rem;
-    box-shadow: var(--shadow);
-    text-align: center;
+  background: var(--white);
+  padding: 2rem;
+  max-width: 576px;
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  text-align: center;
 }
 
 .wrapper h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 form button {
-    display: flex;
-    grid-gap: .5rem;
-    align-items: center;
-    padding: .75rem 4rem;
-    border-radius: .7rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .875rem;
-    font-weight: 500;
-    background: var(--blue);
-    color: var(--white);
+  display: flex;
+  grid-gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 4rem;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--blue);
+  color: var(--white);
 }
 
 form button:hover {
-    background: var(--blue-d-1);
+  background: var(--blue-d-1);
 }
 
 .rating {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-gap: .5rem;
-    font-size: 2rem;
-    color: var(--yellow);
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 0.5rem;
+  font-size: 2rem;
+  color: var(--yellow);
+  margin-bottom: 2rem;
 }
 
 .rating .star {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .rating .star.active {
-    opacity: 0;
-    animation: animate .5s calc(var(--i) * .1s) ease-in-out forwards;
+  opacity: 0;
+  animation: animate 0.5s calc(var(--i) * 0.1s) ease-in-out forwards;
 }
 
 @keyframes animate {
-    0% {
-        opacity: 0;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .rating .star:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .input-group {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-    position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  position: relative;
 }
 
 .input-group textarea {
-    width: 100%;
-    background: var(--light);
-    padding: 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    resize: none;
-    margin-bottom: .5rem;
+  width: 100%;
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  resize: none;
+  margin-bottom: 0.5rem;
 }
 
 .input-group span {
-    position: absolute;
-    bottom: 12px;
-    right: 17px;
-    font-size: 12px;
-    color: red;
+  position: absolute;
+  bottom: 12px;
+  right: 17px;
+  font-size: 12px;
+  color: red;
 }
 
 #submit-error {
-    font-size: .775rem;
-    font-weight: 500;
-    text-align: left;
-    margin: 10px;
-    color: red;
+  font-size: 0.775rem;
+  font-weight: 500;
+  text-align: left;
+  margin: 10px;
+  color: red;
 }
 
 .input-group span i {
-    color: seagreen;
-    font-size: 30px;
+  color: seagreen;
+  font-size: 30px;
 }

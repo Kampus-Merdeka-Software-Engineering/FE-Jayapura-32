@@ -64,7 +64,7 @@ function validateEmail() {
 }
 function validateMessage() {
   var message = document.getElementById("review-message").value;
-  var required = 10;
+  var required = 30;
   var left = required - message.length;
 
   if (left > 0) {

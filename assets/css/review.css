@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;0,800;1,700;1,800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -42,6 +41,25 @@ body {
     margin-bottom: 1rem;
 }
 
+form button {
+    display: flex;
+    grid-gap: .5rem;
+    align-items: center;
+    padding: .75rem 4rem;
+    border-radius: .7rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: .875rem;
+    font-weight: 500;
+    background: var(--blue);
+    color: var(--white);
+}
+
+form button:hover {
+    background: var(--blue-d-1);
+}
+
 .rating {
     display: flex;
     justify-content: center;
@@ -52,7 +70,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.rating .star{
+.rating .star {
     cursor: pointer;
 }
 
@@ -80,7 +98,15 @@ body {
     transform: scale(1.1);
 }
 
-textarea {
+.input-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-group textarea {
     width: 100%;
     background: var(--light);
     padding: 1rem;
@@ -91,36 +117,23 @@ textarea {
     margin-bottom: .5rem;
 }
 
-.btn-group {
-    display: flex;
-    grid-gap: .5rem;
-    align-items: center;
+.input-group span {
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 12px;
+    color: red;
 }
 
-.btn-group .btn {
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .875rem;
+#submit-error {
+    font-size: .775rem;
     font-weight: 500;
+    text-align: left;
+    margin: 10px;
+    color: red;
 }
 
-.btn-group .btn.submit {
-    background: var(--blue);
-    color: var(--white);
-}
-
-.btn-group .btn.submit:hover {
-    background: var(--blue-d-1);
-}
-
-.btn-group .btn.cancel {
-    background: var(--white);
-    color: var(--blue);
-}
-
-.btn-group .btn.cancel:hover {
-    background: var(--light);
+.input-group span i {
+    color: seagreen;
+    font-size: 30px;
 }

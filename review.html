@@ -2,44 +2,47 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- 
         - boxicons link
     -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Form Feedback and Review</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>Form Review</title>
 
     <!-- 
         - custom css link
     -->
-    <link rel="stylesheet" href="./assets/css/review.css">
+    <link rel="stylesheet" href="./assets/css/review.css" />
 </head>
 
 <body>
-
     <div class="wrapper">
-        <h3>Feedback and Review</h3>
+        <h3>Feedback and Reviews</h3>
         <form action="https://kampus-merdeka-software-engineering.github.io/FE-Jayapura-32/">
             <div class="rating">
-                <input type="number" name="rating" hidden>
-                <i class='bx bx-star star' style="--i: 0;"></i>
-                <i class='bx bx-star star' style="--i: 1;"></i>
-                <i class='bx bx-star star' style="--i: 2;"></i>
-                <i class='bx bx-star star' style="--i: 3;"></i>
-                <i class='bx bx-star star' style="--i: 4;"></i>
+                <input type="number" name="rating" hidden />
+                <i class="bx bx-star star" style="--i: 0"></i>
+                <i class="bx bx-star star" style="--i: 1"></i>
+                <i class="bx bx-star star" style="--i: 2"></i>
+                <i class="bx bx-star star" style="--i: 3"></i>
+                <i class="bx bx-star star" style="--i: 4"></i>
             </div>
-            <textarea name="opinion" cols="30" rows="5" placeholder="Your Feedback..."></textarea>
-            <div class="btn-group">
-                <button type="submit" class="btn submit">Submit</button>
-                <button class="btn cancel">Cancel</button>
+
+            <div class="input-group">
+                <textarea rows="5" placeholder="Your feedback..." id="review-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
             </div>
-        </form>
+
+            <button onclick="return validateForm()">Submit</button>
+            <span id="submit-error"></span>
+
+    </div>
+    </form>
     </div>
 
     <script src="./assets/js/review.js"></script>
-
 </body>
 
 </html>

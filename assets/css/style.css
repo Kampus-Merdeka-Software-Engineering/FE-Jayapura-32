@@ -822,9 +822,9 @@ body {
     margin-inline: auto;
   }
   /**
-   * BLOG
+   * TESTIMONIAL
    */
-  .blog-card .h3 {
+  .testimonial-card .h3 {
     --fs-5: 2.6rem;
   }
   /**
@@ -928,9 +928,9 @@ body {
     padding-block: 60px;
   }
   /**
-   * BLOG
+   * TESTIMONIAL
    */
-  .blog-list {
+  .testimonial-list {
     grid-template-columns: 1fr 1fr;
   }
   /**
@@ -1091,9 +1091,9 @@ body {
     padding-block: 80px;
   }
   /**
-   * BLOG
+   * TESTIMONIAL
    */
-  .blog-list {
+  .testimonial-list {
     grid-template-columns: repeat(3, 1fr);
   }
   /**

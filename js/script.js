@@ -74,7 +74,7 @@ form.addEventListener('submit', e => {
             msg.innerHTML = "Thank You For Subscribing!"
             setTimeout(function() {
                 msg.innerHTML = ""
-            }, 5000)
+            }, 3000)
             form.reset()
         })
         .catch(error => console.error('Error!', error.message))

@@ -30,14 +30,14 @@ allStar.forEach((item, idx) => {
 // Submit
 
 function validateName() {
-  var name = document.getElementById("review-name").value;
+  var full_name = document.getElementById("review-full_name").value;
 
-  if (name.length == 0) {
+  if (full_name.length == 0) {
     nameError.innerHTML = "Name is required";
     return false;
   }
 
-  if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+  if (!full_name.match(/^[A-Za-z]*\s{1}[A-Za-z]*\s{1}[A-Za-z]*$/)) {
     nameError.innerHTML = "Write full name";
     return false;
   }
@@ -96,10 +96,11 @@ function postReviewFormData(event) {
 
   // taking data from form
   const form = event.target;
-  const email = form.querySelector('[name="email"]').value;
-  const full_name = form.querySelector('[name="full_name"]').value;
-  const message = form.querySelector('[name="message"]').value;
-  const star = form.querySelector('[name="star"]').value;
+  const email = (email = document.getElementById("review-email").value);
+  const full_name = (full_name =
+    document.getElementById("review-full_name").value);
+  const message = document.getElementById("review-message").value;
+  const star = (ratingValue = document.querySelector(".rating input"));
 
   // making object data
   const data = {
@@ -108,6 +109,8 @@ function postReviewFormData(event) {
     message: message,
     star: star,
   };
+
+  alert(data);
 
   // send data as json
   fetch(

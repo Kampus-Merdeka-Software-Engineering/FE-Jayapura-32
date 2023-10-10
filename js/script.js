@@ -116,7 +116,7 @@ function getReview(event) {
       .then((response) => response.json())
       .then((data) => {
         const testimonialElement = document.querySelector(
-          "testimonial .testimonial-box-container"
+          ".section testimonial"
         );
         testimonialElement.querySelector("profile").textContent =
           data.description;

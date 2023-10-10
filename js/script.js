@@ -132,4 +132,25 @@ function getReview(event) {
 document
   .querySelector('.section.hero form[name="submit-to-google-sheet"]')
   .addEventListener("submit", postEmail);
-document.addEventListener("DOMContentLoaded", getReview);
+document.addEventListener("DOMContentLoaded", function () {
+  getHome(); // Panggil fungsi getHome saat DOM diinisialisasi
+  getReview(); // Panggil fungsi getReview saat DOM diinisialisasi
+});
+
+function getHome() {
+  // Gunakan metode fetch untuk mengambil data dari URL yang diberikan
+  fetch("https://be-jayapura-32-production.up.railway.app/")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Lakukan sesuatu dengan data yang Anda dapatkan dari URL
+      console.log("Data dari URL:", data);
+    })
+    .catch((error) => {
+      console.error("Ada kesalahan dalam mengambil data:", error);
+    });
+}

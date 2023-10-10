@@ -88,7 +88,7 @@ function postEmail(event) {
   };
 
   // send data as json
-  fetch("https://be-jayapura-32-production.up.railway.app/api/email_cb/add", {
+  fetch("https://be-jayapura-32-production.up.railway.app/api/email_cb/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -110,21 +110,26 @@ function postEmail(event) {
     .catch((error) => console.error("Error sending email data:", error));
 }
 
-// function getReview(event){
-//   function fetchReviewData() {
-//     fetch('https://be-jayapura-32-production.up.railway.app/api/user_review')
-//         .then(response => response.json())
-//         .then(data => {
-//             const testimonialElement = document.querySelector('testimonial .testimonial-box-container');
-//             testimonialElement.querySelector('profile').textContent = data.description;
-//             testimonialElement.querySelector('reviews').textContent = data.description;
-//             testimonialElement.querySelector('client-comment').textContent = data.description;
-//         })
-//         .catch(error => console.error('Error fetching header data:', error));
-// }
-// }
+function getReview(event) {
+  function fetchReviewData() {
+    fetch("https://be-jayapura-32-production.up.railway.app/api/user_review")
+      .then((response) => response.json())
+      .then((data) => {
+        const testimonialElement = document.querySelector(
+          "testimonial .testimonial-box-container"
+        );
+        testimonialElement.querySelector("profile").textContent =
+          data.description;
+        testimonialElement.querySelector("reviews").textContent =
+          data.description;
+        testimonialElement.querySelector("client-comment").textContent =
+          data.description;
+      })
+      .catch((error) => console.error("Error fetching header data:", error));
+  }
+}
 
 document
   .querySelector('.section.hero form[name="submit-to-google-sheet"]')
   .addEventListener("submit", postEmail);
-// document.addEventListener('DOMContentLoaded', getReview);
+document.addEventListener("DOMContentLoaded", getReview);

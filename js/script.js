@@ -112,7 +112,7 @@ function postEmail(event) {
 
 function getReview(event) {
   function fetchReviewData() {
-    fetch("https://be-jayapura-32-production.up.railway.app/api/user_review")
+    fetch("https://be-jayapura-32-production.up.railway.app/api/user_review/")
       .then((response) => response.json())
       .then((data) => {
         const testimonialElement = document.querySelector(
